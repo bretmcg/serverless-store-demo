@@ -16,7 +16,7 @@
           <div class="card-content">
             <h1 class="title is-spaced">{{ product.name }}</h1>
             <p class="subtitle is-6">{{ product.description }}</p>
-            <p class="subtitle is-4">${{ product.price }}</p>
+            <p class="subtitle is-4">${{'%0.2f'| format(product.price|float)}}</p>
             <p>
               {% for label in product.labels[:3] %}
               <span class="tag is-light is-medium">{{ label }}</span>

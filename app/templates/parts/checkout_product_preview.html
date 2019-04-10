@@ -12,7 +12,7 @@
         <strong>{{ product.name }}</strong>
         <br>
         {{ product.description }}
-        <h1 class="title has-text-weight-light">${{ product.price }}</h1>
+        <h1 class="title has-text-weight-light">${{'%0.2f'| format(product.price|float)}}</h1>
       </p>
       </div>
     </div>
