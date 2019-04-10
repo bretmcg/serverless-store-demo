@@ -21,7 +21,7 @@
           <div class="content">
             <h2 class="title">{{ item.info.name }}</h1>
             <p class="subtitle">{{ item.info.description }}</p>
-            <p class="subtitle">${{ item.info.price }}</p>
+            <p class="subtitle">${{'%0.2f'| format(item.info.price|float)}}</p>
           </div>
         </div>
         <div class="media-right">

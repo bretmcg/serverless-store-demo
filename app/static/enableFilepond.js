@@ -21,7 +21,7 @@ FilePond.setOptions({
   allowReplace: false,
   allowImagePreview: true,
   server: {
-    process: 'https://us-central1-digicon-demo.cloudfunctions.net/upload_image',
+    process: 'https://us-central1-soft-serverless.cloudfunctions.net/upload_image',
     fetch: null,
     revert: null,
     restore: null,
