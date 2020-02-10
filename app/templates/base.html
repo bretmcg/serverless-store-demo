@@ -23,13 +23,16 @@
     .card-content .subtitle {
         min-height: 80px;
     }
+    .card-content {
+	  min-height: 450px;
+    }
   </style>
   {% block head_extension %}
   {% endblock %}
 </head>
 <body>
   <nav class="navbar has-background-dark">
-    <div class="navbar-menu">
+    <div class="container navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item has-text-light" href="/">Soft Serverless Ice Cream Shop</a>
       </div>
@@ -37,7 +40,7 @@
       <div class="navbar-end">
         {% if auth_context %}
         <div class="navbar-item">
-          <a id="username" class="has-text-white">{{ auth_context.get('username') }} ({{ auth_context.get('email') }})</a>
+          <a id="username" class="has-text-white">{{ auth_context.get('username') }}</a>
         </div>
         <div class="navbar-item">
           <a id="cart" class="has-text-white" href="/cart"><i class="fas fa-shopping-cart"></i></a>

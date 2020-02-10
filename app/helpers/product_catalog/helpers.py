@@ -72,7 +72,8 @@ def list_products():
        A list of Product objects.
     """
 
-    products = firestore_client.collection('products').order_by('created_at').get()
+    products = firestore_client.collection('products').order_by(
+        'created_at', direction=firestore.Query.DESCENDING).get()
     product_list = [Product.deserialize(product) for product in list(products)]
     return product_list
 
